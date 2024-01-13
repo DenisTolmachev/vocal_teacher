@@ -9,7 +9,8 @@
   flex-direction: column;
 
   & h2 {
-    color: #000;
+    color: var(--secondary_color);
+    font-family: var(--font-monts);
     font-size: 64px;
     font-style: normal;
     font-weight: 400;
@@ -17,7 +18,8 @@
   }
 
   & p {
-    color: #000;
+    color: var(--secondary_color);
+    font-family: var(--font-montsAlt);
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -27,5 +29,17 @@
 }
 
 .sliderWrapper {
-  display: flex;
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+
+    & p {
+        color: var(--secondary_color);
+    font-family: var(--font-monts);
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+  }

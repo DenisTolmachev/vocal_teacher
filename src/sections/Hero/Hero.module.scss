@@ -16,6 +16,7 @@
 
   & h1 {
     color: var(--primary_color);
+    font-family: var(--font-monts);
     font-size: 96px;
     font-style: normal;
     font-weight: 700;
@@ -23,10 +24,12 @@
   }
 
   & p {
-    color: #fff;
+    color: var(--primary_color);
+    font-family: var(--font-monts);
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-top: 20px;
   }
 }
