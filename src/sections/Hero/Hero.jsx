@@ -1,8 +1,10 @@
+import styles from './Hero.module.scss'
+
 const Hero = () => {
     return (
-        <div>
+        <section className={styles.container}>
             Hero
-        </div>
+        </section>
     );
 }
 
