@@ -1,7 +1,32 @@
 .container {
+    display: flex;
   height: 100vh;
+  padding: 0 122px;
   background-image: url(../../../public/img/hero_bg_img.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 100%;
+}
+
+.heroTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+
+  & h1 {
+    color: var(--primary_color);
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  & p {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
