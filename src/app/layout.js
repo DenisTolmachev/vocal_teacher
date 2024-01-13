@@ -1,7 +1,18 @@
-import { montserrat } from "./fonts";
+import { Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.scss";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+
+const montserrat = Montserrat({
+  subsets: ["cyrillic"],
+  variable: "--font-monts",
+});
+
+const montsAlt = Montserrat_Alternates({
+  subsets: ["cyrillic"],
+  variable: "--font-montsAlt",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
   title: "Vocal Teacher",
@@ -11,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ua">
-      <body className={montserrat.className}>
+      <body className={`${montserrat.variable} ${montsAlt.variable}`}>
         <Header />
         {children}
         <Footer />
