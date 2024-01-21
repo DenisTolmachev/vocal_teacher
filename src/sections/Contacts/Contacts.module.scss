@@ -24,6 +24,8 @@
 .adressWrapper {
   display: flex;
   margin-top: 176px;
+  align-items: center;
+  gap: 13px;
 
   & p {
     color: var(--primary_color);
@@ -32,30 +34,54 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-right: 100px;
   }
 }
 
 .adressIcon {
-    margin-top: 72px;
-    color: var(--primary_color);
-    font-family: var(--font-monts);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  color: var(--primary_color);
+
+  & svg {
+    width: 32px;
+    height: 38px;
+    fill: currentColor;
+  }
+}
+
+.socialIcons {
+  margin-top: 74px;
+}
+
+.socialIconsList {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.socialIconsItem {
+  color: var(--primary_color);
+}
+
+.icon {
+  width: 23px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  fill: currentColor;
 }
 
 .contactButton {
-    margin-top: 162px;
-    padding: 8px 57px;
-    background-color: var(--accent_color);
-    border-radius: 30px;
-    color: var(--primary_color);
-    font-family: var(--font-monts);
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  cursor: pointer;
+  margin-top: 162px;
+  padding: 8px 57px;
+  background-color: var(--accent_color);
+  border-radius: 30px;
+  color: var(--primary_color);
+  font-family: var(--font-monts);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .formWrapper {
