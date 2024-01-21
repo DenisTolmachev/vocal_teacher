@@ -1,4 +1,5 @@
 import styles from "./Contacts.module.scss";
+import { socialIconsArr } from "@/data/socialIconsArr";
 
 const Contacts = () => {
   return (
@@ -15,34 +16,17 @@ const Contacts = () => {
         </div>
         <div className={styles.socialIcons}>
           <ul className={styles.socialIconsList}>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#telegram" />
-                </svg>
-              </a>
-            </li>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#phone" />
-                </svg>
-              </a>
-            </li>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#email" />
-                </svg>
-              </a>
-            </li>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#viber" />
-                </svg>
-              </a>
-            </li>
+          {socialIconsArr.map(({ id, href, img }) => {
+              return (
+                <li key={id} className={styles.socialIconsItem}>
+                  <a href={href}>
+                    <svg className={styles.icon}>
+                      <use href={img} />
+                    </svg>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <button className={styles.contactButton}>Корисні статті</button>

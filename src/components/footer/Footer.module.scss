@@ -12,6 +12,20 @@
   align-items: center;
 }
 
+.footerMenuItem {
+  color: var(--secondary_color);
+  font-family: var(--font-monts);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.footerMenuItem:last-child {
+    margin-bottom: 0;
+}
+
 .adressWrapper {
   display: flex;
   align-items: center;
