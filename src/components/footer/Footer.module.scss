@@ -1,5 +1,4 @@
 .footer {
-  background-color: aqua;
   padding-top: 27px;
   padding-bottom: 15px;
   padding-left: 122px;
@@ -11,6 +10,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.footerMenuItem {
+  color: var(--secondary_color);
+  font-family: var(--font-monts);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+
+.footerMenuItem:last-child {
+    margin-bottom: 0;
 }
 
 .adressWrapper {
@@ -30,7 +43,7 @@
 }
 
 .adressIcon {
-  color: var(--primary_color);
+  color: var(--secondary_color);
 
   & svg {
     width: 32px;
@@ -59,4 +72,14 @@
 
 .copyright {
   text-align: center;
+  //color: var(--secondary_color);
+  font-family: var(--font-nanumMye);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(92deg, #7a002f 42.65%, #000 126.03%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

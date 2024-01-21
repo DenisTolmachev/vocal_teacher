@@ -1,4 +1,4 @@
-export const lincsArr = [
+export const linksArr = [
   {
     id: "1",
     title: "Про мене",

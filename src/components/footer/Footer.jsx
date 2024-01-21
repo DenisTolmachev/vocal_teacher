@@ -1,15 +1,21 @@
 import styles from "./Footer.module.scss";
 import Link from "next/link";
+import { linksArr } from "@/data/linksArr";
+import { socialIconsArr } from "@/data/socialIconsArr";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContentWrapper}>
         <div>
-          <ul>
-            <li>Про мене</li>
-            <li>Контакти</li>
-            <li>Корисні статті</li>
+          <ul className={styles.footerMenuList}>
+            {linksArr.map(({ id, title, href }) => {
+              return (
+                <li key={id} className={styles.footerMenuItem}>
+                  <Link href={href}>{title}</Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className={styles.adressWrapper}>
@@ -23,42 +29,22 @@ const Footer = () => {
 
         <div className={styles.socialIcons}>
           <ul className={styles.socialIconsList}>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#telegram" />
-                </svg>
-              </a>
-            </li>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#phone" />
-                </svg>
-              </a>
-            </li>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#email" />
-                </svg>
-              </a>
-            </li>
-            <li className={styles.socialIconsItem}>
-              <a href="#">
-                <svg className={styles.icon}>
-                  <use href="/sprite.svg#viber" />
-                </svg>
-              </a>
-            </li>
+            {socialIconsArr.map(({ id, href, img }) => {
+              return (
+                <li key={id} className={styles.socialIconsItem}>
+                  <a href={href}>
+                    <svg className={styles.icon}>
+                      <use href={img} />
+                    </svg>
+                  </a>
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
       <div className={styles.copyright}>
-        <Link
-          href="https://webevery.dev/"
-          target="_blank"
-        >
+        <Link href="https://webevery.dev/" target="_blank">
           webevery.dev
         </Link>
       </div>
