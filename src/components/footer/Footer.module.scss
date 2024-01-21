@@ -58,4 +58,14 @@
 
 .copyright {
   text-align: center;
+  //color: var(--secondary_color);
+  font-family: var(--font-nanumMye);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(92deg, #7a002f 42.65%, #000 126.03%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
