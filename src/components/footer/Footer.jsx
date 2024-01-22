@@ -32,7 +32,7 @@ const Footer = () => {
             {socialIconsArr.map(({ id, href, img }) => {
               return (
                 <li key={id} className={styles.socialIconsItem}>
-                  <a href={href}>
+                  <a href={href} target="_blank">
                     <svg className={styles.icon}>
                       <use href={img} />
                     </svg>

@@ -8,7 +8,17 @@
   --contact_bg_color: #0b0b0beb;
 }
 
-html,
-body {
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+head,
+footer {
+  width: inherit;
+  max-width: inherit;
 }
