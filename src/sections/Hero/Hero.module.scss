@@ -1,8 +1,11 @@
 .container {
   display: flex;
   height: 100vh;
-  padding: 0 122px;
-  background-image: url(../../../public/img/hero_bg_img.png);
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 122px;
+  padding-right: 0;
+  background-image: url(../../../public/img/hero_bg_img1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100% 100%;
@@ -10,10 +13,14 @@
 
 .heroTitleWrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 45%;
+  width: 100%;
+}
 
+.heroInfo {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 50%;
   & h1 {
     color: var(--primary_color);
     font-family: var(--font-monts);
@@ -32,4 +39,8 @@
     line-height: normal;
     margin-top: 20px;
   }
+}
+
+.heroMic {
+  width: 50%;
 }

@@ -1,0 +1,17 @@
+.socialIconsList {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .socialIconsItem {
+    & svg {
+      width: 23px;
+      height: 24px;
+      fill: currentColor;
+    }
+  
+    & svg:hover {
+      fill: var(--accent_color);
+    }
+  }
