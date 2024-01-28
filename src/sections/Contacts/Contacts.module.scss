@@ -48,26 +48,9 @@
   }
 }
 
-.socialIcons {
+.socialIconsWrapper {
   margin-top: 74px;
-}
-
-.socialIconsList {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
-.socialIconsItem {
   color: var(--primary_color);
-}
-
-.icon {
-  width: 23px;
-  height: 24px;
-  margin: 0;
-  padding: 0;
-  fill: currentColor;
 }
 
 .contactButton {

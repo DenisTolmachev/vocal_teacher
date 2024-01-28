@@ -1,9 +1,10 @@
+import SocialIconsList from "@/components/socialIconsList/SocialIconsList";
 import styles from "./Contacts.module.scss";
 import { socialIconsArr } from "@/data/socialIconsArr";
 
 const Contacts = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="contacts">
       <div className={styles.contactsWrapper}>
         <h2>Контакти</h2>
         <div className={styles.adressWrapper}>
@@ -14,20 +15,8 @@ const Contacts = () => {
           </figure>
           <p>Івано-Франківськ вул. Броварська буд.5 офіс 3 </p>
         </div>
-        <div className={styles.socialIcons}>
-          <ul className={styles.socialIconsList}>
-          {socialIconsArr.map(({ id, href, img }) => {
-              return (
-                <li key={id} className={styles.socialIconsItem}>
-                  <a href={href}>
-                    <svg className={styles.icon}>
-                      <use href={img} />
-                    </svg>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+        <div className={styles.socialIconsWrapper}>
+          <SocialIconsList/>
         </div>
         <button className={styles.contactButton}>Корисні статті</button>
       </div>

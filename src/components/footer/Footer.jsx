@@ -2,6 +2,7 @@ import styles from "./Footer.module.scss";
 import Link from "next/link";
 import { linksArr } from "@/data/linksArr";
 import { socialIconsArr } from "@/data/socialIconsArr";
+import SocialIconsList from "../socialIconsList/SocialIconsList";
 
 const Footer = () => {
   return (
@@ -27,20 +28,8 @@ const Footer = () => {
           <p>Івано-Франківськ вул. Броварська буд.5 офіс 3 </p>
         </div>
 
-        <div className={styles.socialIcons}>
-          <ul className={styles.socialIconsList}>
-            {socialIconsArr.map(({ id, href, img }) => {
-              return (
-                <li key={id} className={styles.socialIconsItem}>
-                  <a href={href} target="_blank">
-                    <svg className={styles.icon}>
-                      <use href={img} />
-                    </svg>
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+        <div className={styles.socialIconsWrapper}>
+          <SocialIconsList />
         </div>
       </div>
       <div className={styles.copyright}>
